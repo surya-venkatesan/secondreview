@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='style.css')}}" rel="stylesheet" />
+
+
+    <title>Emotion Based Music Player</title>
+
+  </head>
+  <body>
+    <div class="header">
+      <nav>
+        <div class="logo">
+          <img id="img_logo" src="static/img2.png" alt="" />
+          <span id="title">EMOPLAYER</span>
+        </div>
+        <ul>
+          <li><a href="http://localhost:5000/">HOME</a></li>
+          <li><a href="#">FEATURES</a></li>
+          <li><a href="#">CONTACT</a></li>
+    
+          <li><a href="#">SUPPORT</a></li>
+        </ul>
+      </nav>
+      <div class="col-md-12">
+        <h3 data-aos="fade-right">ANGRY SONGS</h3>
+      </div>
+    
+      <div class="main">
+        <div class="container">
+          <div class="row"></div>
+    
+          <div id="aplayer"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='script.js')}}"></script>
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</html>
+  
+
+
+
+<!-- <script>
+
+
+  NOW I CLICK album-poster TO GET CURRENT SONG ID
+  $(".album-poster").on('click', function(e){
+    var dataSwitchId = $(this).attr('data-switch');
+    //console.log(dataSwitchId);
+
+    // and now i use aplayer switch function see
+    ap.list.switch(dataSwitchId); //this is static id but i use dynamic 
+
+    // aplayer play function
+    // when i click any song to play
+    ap.play();
+
+    // click to slideUp player see
+    $("#aplayer").addClass('showPlayer');
+  });
+
+  const ap = new APlayer({
+      container: document.getElementById('aplayer'),
+      listFolded: true,
+      audio: [
+      {
+          name: 'Invisible Beauty',
+          artist: 'Artist Name',
+          url: 'source/invisible_beauty.mp3',
+          cover: 'https://images.pexels.com/photos/1699161/pexels-photo-1699161.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+      },
+    {
+          name: 'Just Stay',  // SONG NAME
+          artist: 'Artist Name', //ARTIST NAME
+          url: 'source/just_stay.mp3', // PATH NAME AND SONG URL
+          cover: 'https://images.pexels.com/photos/838702/pexels-photo-838702.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' // COVER IMAGE
+      },
+    {
+      name: 'Liquid Time',
+      artist: 'Artist Name',
+      url: 'source/liquid_time.mp3',
+      cover: 'https://images.pexels.com/photos/838696/pexels-photo-838696.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    },
+    {
+      name: 'Silky Smooth',
+      artist: 'Artist Name',
+      url: 'source/silky_smooth.mp3',
+      cover: 'https://images.pexels.com/photos/1370545/pexels-photo-1370545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    },
+
+
+      ]
+  });
+</script> -->
